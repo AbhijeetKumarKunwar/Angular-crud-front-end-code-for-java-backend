@@ -1,0 +1,30 @@
+<div class="top-nav">
+    <div class="content in28minute"><a class="content" [routerLink]="['/in28minutes']">In28Minutes</a></div>
+    <div class="content"> <a class="content" [routerLink]="['/home']">Home</a></div>
+
+    <div class="content"><a class="content" [routerLink]="['/todos']">Todos</a></div>
+
+</div>
+<div class="container">
+    <form (ngSubmit)="!f1.invalid && saveTodo()" #f1="ngForm">
+        <H1>Todo</H1>
+
+        <div class="alert alert-warning" *ngIf="f1.invalid && f1.touched">Enter the valid input</div>
+
+        <fieldset class="form-group">
+            <label>Description</label>
+            <input type="text" [(ngModel)]="todo.description" class="form-control" name="description" required>
+        </fieldset>
+        <br>
+        <fieldset class="form-group">
+            <label>Target Date</label>
+            <input type="date" [ngModel]="todo.targateDate |date:'yyyy-MM-dd' "
+                (ngModelChange)="todo.targateDate=$event " class="form-control" name="targateDate" required>
+        </fieldset>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!f1.valid">Save</button>
+        </div>
+
+    </form>
+</div>

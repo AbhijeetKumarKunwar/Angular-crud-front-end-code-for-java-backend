@@ -1,0 +1,40 @@
+.top-nav
+{
+    background-color: #333;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+   
+    align-items: center;
+    overflow: left;
+   
+   
+    
+    
+}
+.in28minute
+{
+    background-color: #04AA6D;
+  color: white;
+}
+.content
+{
+    font-size: large;
+    color: aliceblue;
+    text-decoration: none;
+   
+    text-indent: 8px;
+    padding: 13px 16px;/* this will cover the texted nav area with full width*/
+    cursor: pointer;
+    text-underline-offset: none;
+    &:hover
+    {
+        background-color: aliceblue;;
+        color: black;
+
+    }
+}
+.contentPage
+{
+   padding-left: 39px;;
+}

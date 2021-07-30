@@ -1,0 +1,20 @@
+<div class="top-nav">
+    <div class="content in28minute"><a class="content" [routerLink]="['/in28minutes']">In28Minutes</a></div>
+    <div class="content"> <a class="content" [routerLink]="['/home']">Home</a></div>
+   
+    <div class="content"><a class="content" [routerLink]="['/todos']">Todos</a></div>
+  
+  </div>
+  <div class="contentPage">
+  <h1>Welcome</h1>
+  <br>
+  <p>Welcome in28minutes. You can manage your todos <a href="#"> here</a></p>
+  <p>click here to get customized message</p>
+  <button class="btn btn-primary"(click)="getPathVariableBean()">Get Welcome message</button>
+  </div>
+  <div class="container" *ngIf="Message">
+    <h2>Your customized message </h2>
+    {{Message}}
+  </div>
+  
+  
